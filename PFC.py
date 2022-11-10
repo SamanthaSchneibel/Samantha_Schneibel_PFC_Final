@@ -1,9 +1,9 @@
 #DEBUT
 
 #on admet qu'une fonction random existe et renvoie un chiffre aléatoire entre 1 et 3
-#on admet qu'une fonction input existe et demande à l'utilisateur de rentrer une chaine de caractères et la retourne
-#definir un fonction pierreFeuilleCiseaux
-    #créer une varaible playerPoint et lui associer 0
+#on admet qu'une fonction input existe et demande à l'utilisateur de rentrer une chaîne de caractères et la retourne
+#définir un fonction pierreFeuilleCiseaux
+    #créer une variable playerPoint et lui associer 0
     #créer une variable ordiPoint et lui associer 0
     #créer une variable score et lui associer la concaténation nickname + ":" + str(playerPoint) + "Ordinateur : " + str(ordiPoint)
     #créer une variable nickname et lui associer le retour de l'exécution de la fonction input("Entrez votre pseudo : ")
@@ -16,8 +16,8 @@
         #tant que otherGame est vrai
         #tant que game est vrai
             #afficher "Chi-fou-mi"
-                #céer une variable playerChoice et lui associer le retour de l'exécution de la fonction input("(P)ierre/(F)euille/(C)iseaux")
-                #céer une variable ordiChoice et lui associer le retour de l'exécution de la fonction random
+                #créer une variable playerChoice et lui associer le retour de l'exécution de la fonction input("(P)ierre/(F)euille/(C)iseaux")
+                #créer une variable ordiChoice et lui associer le retour de l'exécution de la fonction random
                     #si playerChoice est égal à "P" ou "p" ET ordiChoice est égal à 1
                         #alors afficher "Pierre VS Pierre"
                         #afficher "Egalité"
@@ -74,6 +74,6 @@
                 #alors otherGame est faux
                 #afficher "A bientôt nickname !"
                 #casser la boucle
-#éxecuter la fonction pierreFeuilleCiseaux()
+#exécuter la fonction pierreFeuilleCiseaux()
 
 #FIN
