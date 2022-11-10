@@ -15,9 +15,9 @@
             #alors game est faux
         #tant que otherGame est vrai
         #tant que game est vrai
-                #céer une variable playerChoice et lui associer le retour de l'exécution de la fonction input ("(P)ierre/(F)euille/(C)iseaux")
+            #afficher "Chi-fou-mi"
+                #céer une variable playerChoice et lui associer le retour de l'exécution de la fonction input("(P)ierre/(F)euille/(C)iseaux")
                 #céer une variable ordiChoice et lui associer le retour de l'exécution de la fonction random
-                #afficher "Chi-fou-mi"
                     #si playerChoice est égal à "P" ou "p" ET ordiChoice est égal à 1
                         #alors afficher "Pierre VS Pierre"
                         #afficher "Egalité"
