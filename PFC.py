@@ -5,10 +5,10 @@ def pierreFeuilleCiseaux():
     playerPoint = 0
     computerPoint = 0
     
-    game = input(nickname + ", voulez-vous jouer ?")
-    if game == "yes":
+    game = input(nickname + ", voulez-vous jouer ? ")
+    if game == "oui":
         game = True
-    elif game == "no":
+    elif game == "non":
         game = False
 
     while game == True:
@@ -21,7 +21,7 @@ def pierreFeuilleCiseaux():
             computerChoice = "Feuille"
         else: computerChoice = "Ciseaux"
 
-        playerChoice = input("(P)ierre/(F)euille/(C)iseaux")
+        playerChoice = input("(P)ierre/(F)euille/(C)iseaux ? ")
         if playerChoice == "P" or "p":
             playerChoice = "Pierre"
         elif playerChoice == "F" or "f":
@@ -32,19 +32,22 @@ def pierreFeuilleCiseaux():
         if playerChoice == computerChoice :
             print(playerChoice + " VS " + computerChoice)
             print("Egalité")
-            print(nickname + ":" + str(playerPoint) + "Ordinateur :" + str(computerPoint))
+            print(nickname + ": " + str(playerPoint) + " Ordinateur : " + str(computerPoint))
+            print("------------------------------")
 
         elif playerChoice == "Pierre" and computerChoice == "Ciseaux" or (playerChoice == "Feuille" and computerChoice == "Pierre") or(playerChoice == "Ciseaux" and computerChoice == "Feuille"):
             print(playerChoice + " VS " + computerChoice)
             print("Gagné")
             playerPoint = playerPoint + 1
-            print(nickname + ":" + str(playerPoint) + "Ordinateur :" + str(computerPoint))
+            print(nickname + ": " + str(playerPoint) + " Ordinateur : " + str(computerPoint))
+            print("------------------------------")
         
         elif playerChoice == "Pierre" and computerChoice == "Feuille" or (playerChoice == "Feuille" and computerChoice == "Ciseaux") or(playerChoice == "Ciseaux" and computerChoice == "Pierre"):
             print(playerChoice + " VS " + computerChoice)
             print("Perdu")
             computerPoint = computerPoint + 1
-            print(nickname + ":" + str(playerPoint) + "Ordinateur :" + str(computerPoint))
+            print(nickname + ": " + str(playerPoint) + " Ordinateur : " + str(computerPoint))
+            print("------------------------------")
 
         if playerPoint == 3:
             print(nickname + ", vous avez gagné la partie ! :)")
