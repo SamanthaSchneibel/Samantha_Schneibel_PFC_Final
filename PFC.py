@@ -35,14 +35,14 @@ def pierreFeuilleCiseaux():
             print(nickname + ": " + str(playerPoint) + " Ordinateur : " + str(computerPoint))
             print("------------------------------")
 
-        elif playerChoice == "Pierre" and computerChoice == "Ciseaux" or (playerChoice == "Feuille" and computerChoice == "Pierre") or(playerChoice == "Ciseaux" and computerChoice == "Feuille"):
+        elif playerChoice == "Pierre" and computerChoice == "Ciseaux" or(playerChoice == "Feuille" and computerChoice == "Pierre") or(playerChoice == "Ciseaux" and computerChoice == "Feuille"):
             print(playerChoice + " VS " + computerChoice)
             print("Gagné")
             playerPoint = playerPoint + 1
             print(nickname + ": " + str(playerPoint) + " Ordinateur : " + str(computerPoint))
             print("------------------------------")
         
-        elif playerChoice == "Pierre" and computerChoice == "Feuille" or (playerChoice == "Feuille" and computerChoice == "Ciseaux") or(playerChoice == "Ciseaux" and computerChoice == "Pierre"):
+        elif playerChoice == "Pierre" and computerChoice == "Feuille" or(playerChoice == "Feuille" and computerChoice == "Ciseaux") or(playerChoice == "Ciseaux" and computerChoice == "Pierre"):
             print(playerChoice + " VS " + computerChoice)
             print("Perdu")
             computerPoint = computerPoint + 1
@@ -65,7 +65,7 @@ def pierreFeuilleCiseaux():
                 print("C'est reparti !")
                 pierreFeuilleCiseaux()
             elif otherGame == "no":
-                print("A bientôt, " + nickname  + "!")
+                print("A bientôt, " + nickname  + " !")
                 break
 
 pierreFeuilleCiseaux()
