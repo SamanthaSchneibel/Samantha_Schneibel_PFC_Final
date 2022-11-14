@@ -51,9 +51,21 @@ def pierreFeuilleCiseaux():
 
         if playerPoint == 3:
             print(nickname + ", vous avez gagné la partie ! :)")
-            break
+            otherGame = input("Voulez-vous rejouer ? ")
+            if otherGame == "oui":
+                print("C'est reparti !")
+                pierreFeuilleCiseaux()
+            elif otherGame == "no":
+                print("A bientôt, " + nickname  + " !")
+                break
         elif computerPoint == 3:
             print(nickname + ", vous avez perdu la partie ! :(")
-            break
+            otherGame = input("Voulez-vous rejouer ? ")
+            if otherGame == "oui":
+                print("C'est reparti !")
+                pierreFeuilleCiseaux()
+            elif otherGame == "no":
+                print("A bientôt, " + nickname  + "!")
+                break
 
 pierreFeuilleCiseaux()
