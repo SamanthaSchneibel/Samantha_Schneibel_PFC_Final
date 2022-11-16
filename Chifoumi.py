@@ -5,12 +5,12 @@ from random import randint
 
 #définir la fonction pierreFeuilleCiseaux qui demande le pseudo puis instaure le score du joueur et de l'ordi
 def pierreFeuilleCiseaux():
-    nickname = input("Entrez votre pseudo : ")
+    nickname = input("Entrez votre pseudo : \n")
     playerPoint = 0
     computerPoint = 0
     
     #créer une variable game et lui associer le retour de l'exécution de la fonction input pour demander de jouer ou non
-    game = input(nickname + ", voulez-vous jouer ? oui ou non : ")
+    game = input(nickname + ", voulez-vous jouer ? oui ou non : \n")
     #si game est égal à oui
     if game == "oui":
         #alors game est vrai
@@ -23,76 +23,74 @@ def pierreFeuilleCiseaux():
 
     #tant que game est vrai le jeu Chifoumi se lance
     while game == True:
-        print("------------------------------")
         print("Chi-fou-mi")
 
-        #le choix de l'ordinateur renvoie un chiffre aléatoire entre 1 et 3, 1 étant la Pierre, 2 étant la Feuille et 3 étant les Ciseaux
+        #créer une variable computerChoice qui renvoie un chiffre aléatoire entre 1 et 3, 1 étant la pierre, 2 étant la feuille et 3 étant les ciseaux
         computerChoice = randint(1, 3)
         if computerChoice == 1:
-            computerChoice = "Pierre"
+            computerChoice = "pierre"
         elif computerChoice == 2:
-            computerChoice = "Feuille"
+            computerChoice = "feuille"
         else: 
-            computerChoice = "Ciseaux"
+            computerChoice = "ciseaux"
 
-        #créer une variable playerChoice et lui associer le retour de l'exécution de la fonction input qui demande de choisir Pierre, Feuille ou Ciseaux
-        playerChoice = input("Pierre, Feuille ou Ciseaux ? ")
-
-        #si le joueur choisis Pierre ET l'ordi choisis Pierre aussi alors il y a égalité 
-        if playerChoice == "Pierre" and computerChoice == "Pierre":
+        #créer une variable playerChoice et lui associer le retour de l'exécution de la fonction input qui demande de choisir pierre, feuille ou ciseaux
+        playerChoice = input("pierre, feuille ou ciseaux ? \n")
+        #si le joueur choisis pierre ET l'ordi choisis pierre aussi alors il y a égalité 
+        if playerChoice == "pierre" and computerChoice == "pierre":
             print(playerChoice + " VS " + computerChoice)
             print("Egalité")
             print(nickname + ": " + str(playerPoint) + " Ordinateur : " + str(computerPoint))
             print("------------------------------")
-        #si le joueur choisis Feuille ET l'ordi choisis Feuille aussi alors il y a égalité 
-        elif playerChoice == "Feuille" and computerChoice == "Feuille":
+        #si le joueur choisis feuille ET l'ordi choisis feuille aussi alors il y a égalité 
+        elif playerChoice == "feuille" and computerChoice == "feuille":
             print(playerChoice + " VS " + computerChoice)
             print("Egalité")
             print(nickname + ": " + str(playerPoint) + " Ordinateur : " + str(computerPoint))
             print("------------------------------")
-        #si le joueur choisis Ciseaux ET l'ordi choisis Ciseaux aussi alors il y a égalité 
-        elif playerChoice == "Ciseaux" and computerChoice == "Ciseaux":
+        #si le joueur choisis ciseaux ET l'ordi choisis ciseaux aussi alors il y a égalité 
+        elif playerChoice == "ciseaux" and computerChoice == "ciseaux":
             print(playerChoice + " VS " + computerChoice)
             print("Egalité")
             print(nickname + ": " + str(playerPoint) + " Ordinateur : " + str(computerPoint))
             print("------------------------------")
-        #si le joueur choisis Pierre ET l'ordi choisis Ciseaux alors le joueur gagne un point
-        elif playerChoice == "Pierre" and computerChoice == "Ciseaux":
+        #si le joueur choisis pierre ET l'ordi choisis ciseaux alors le joueur gagne un point
+        elif playerChoice == "pierre" and computerChoice == "ciseaux":
             print(playerChoice + " VS " + computerChoice)
             print("Gagné")
             playerPoint = playerPoint + 1
             print(nickname + ": " + str(playerPoint) + " Ordinateur : " + str(computerPoint))
             print("------------------------------")
-        #si le joueur choisis Feuille ET l'ordi choisis Pierre alors le joueur gagne un point
-        elif playerChoice == "Feuille" and computerChoice == "Pierre":
+        #si le joueur choisis feuille ET l'ordi choisis pierre alors le joueur gagne un point
+        elif playerChoice == "feuille" and computerChoice == "pierre":
             print(playerChoice + " VS " + computerChoice)
             print("Gagné")
             playerPoint = playerPoint + 1
             print(nickname + ": " + str(playerPoint) + " Ordinateur : " + str(computerPoint))
             print("------------------------------")
-        #si le joueur choisis Ciseaux ET l'ordi choisis Feuille alors le joueur gagne un point
-        elif playerChoice == "Ciseaux" and computerChoice == "Feuille":
+        #si le joueur choisis ciseaux ET l'ordi choisis feuille alors le joueur gagne un point
+        elif playerChoice == "ciseaux" and computerChoice == "feuille":
             print(playerChoice + " VS " + computerChoice)
             print("Gagné")
             playerPoint = playerPoint + 1
             print(nickname + ": " + str(playerPoint) + " Ordinateur : " + str(computerPoint))
             print("------------------------------")
-        #si le joueur choisis Pierre ET l'ordi choisis Feuille alors l'ordi gagne un point
-        elif playerChoice == "Pierre" and computerChoice == "Feuille":
+        #si le joueur choisis pierre ET l'ordi choisis feuille alors l'ordi gagne un point
+        elif playerChoice == "pierre" and computerChoice == "feuille":
             print(playerChoice + " VS " + computerChoice)
             print("Perdu")
             computerPoint = computerPoint + 1
             print(nickname + ": " + str(playerPoint) + " Ordinateur : " + str(computerPoint))
             print("------------------------------")
-        #si le joueur choisis Feuille ET l'ordi choisis Ciseaux alors l'ordi gagne un point
-        elif playerChoice == "Feuille" and computerChoice == "Ciseaux":
+        #si le joueur choisis feuille ET l'ordi choisis ciseaux alors l'ordi gagne un point
+        elif playerChoice == "feuille" and computerChoice == "ciseaux":
             print(playerChoice + " VS " + computerChoice)
             print("Perdu")
             computerPoint = computerPoint + 1
             print(nickname + ": " + str(playerPoint) + " Ordinateur : " + str(computerPoint))
             print("------------------------------")
-        #si le joueur choisis Ciseaux ET l'ordi choisis Pierre alors l'ordi gagne un point
-        elif playerChoice == "Ciseaux" and computerChoice == "Pierre":
+        #si le joueur choisis ciseaux ET l'ordi choisis pierre alors l'ordi gagne un point
+        elif playerChoice == "ciseaux" and computerChoice == "pierre":
             print(playerChoice + " VS " + computerChoice)
             print("Perdu")
             computerPoint = computerPoint + 1
@@ -103,7 +101,7 @@ def pierreFeuilleCiseaux():
         if playerPoint == 3:
             print(nickname + ", vous avez gagné la partie ! :)")
             #créer une variable otherGame et lui associer le retour de l'exécution de la fonction input qui demande si le joueur veut refaire une partie
-            otherGame = input("Voulez-vous rejouer ? oui ou non : ")
+            otherGame = input("Voulez-vous rejouer ? oui ou non : \n")
             #si otherGame est égal à oui alors le jeu se relance en exécutant la fonction pierreFeuilleCiseaux
             if otherGame == "oui":
                 print("C'est reparti !")
@@ -115,8 +113,9 @@ def pierreFeuilleCiseaux():
         #si l'ordi est à trois points alors il a gagné la partie
         elif computerPoint == 3:
             print(nickname + ", vous avez perdu la partie ! :(")
+            
             #créer une variable otherGame et lui associer le retour de l'exécution de la fonction input qui demande si le joueur veut refaire une partie
-            otherGame = input("Voulez-vous rejouer ? oui ou non : ")
+            otherGame = input("Voulez-vous rejouer ? oui ou non : \n")
             #si otherGame est égal à oui alors le jeu se relance en exécutant la fonction pierreFeuilleCiseaux
             if otherGame == "oui":
                 print("C'est reparti !")
@@ -125,8 +124,11 @@ def pierreFeuilleCiseaux():
             elif otherGame == "non":
                 print("A bientôt, " + nickname  + " !")
                 break
+            #sinon redemander la question
+            else: 
+                otherGame = input("Voulez-vous rejouer ? oui ou non : \n")
 
-#exécuter la fonction pierreFeuilleCiseaux()
+#exécuter la fonction pierreFeuilleCiseaux
 pierreFeuilleCiseaux()
 
 #FIN
