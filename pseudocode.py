@@ -12,7 +12,7 @@
         #alors game est vrai
     #si game est égal à non
         #alors game est faux
-        #afficher ("tant pis, à bientôt " + nickname + " !")
+        #alors afficher ("tant pis, à bientôt " + nickname + " !")
 
     #tant que game est vrai
         #afficher ("Chi-fou-mi")
@@ -28,66 +28,84 @@
         #créer une variable playerChoice et lui associer le retour de l'exécution de la fonction input pour demander ("pierre, feuille ou ciseaux ? ")
         #si playerChoice est égal à pierre ET computerChoice est égal à pierre
             #alors afficher (playerChoice + " VS " + computerChoice)
-            #afficher ("Egalité")
-            #afficher (nickname + ": " + str(playerPoint) + " Ordinateur : " + str(computerPoint))
-            #afficher ("------------------------------")
+            #alors afficher ("Egalité")
+            #alors afficher (nickname + ": " + str(playerPoint) + " Ordinateur : " + str(computerPoint))
+            #alors afficher ("------------------------------")
         #si playerChoice est égal à feuille ET computerChoice est égal à feuille
             #alors afficher (playerChoice + " VS " + computerChoice)
-            #afficher ("Egalité")
-            #afficher (nickname + ": " + str(playerPoint) + " Ordinateur : " + str(computerPoint))
-            #afficher ("------------------------------")
+            #alors afficher ("Egalité")
+            #alors afficher (nickname + ": " + str(playerPoint) + " Ordinateur : " + str(computerPoint))
+            #alors afficher ("------------------------------")
         #si playerChoice est égal à ciseaux ET computerChoice est égal à ciseaux
             #alors afficher (playerChoice + " VS " + computerChoice)
-            #afficher ("Egalité")
-            #afficher (nickname + ": " + str(playerPoint) + " Ordinateur : " + str(computerPoint))
-            #afficher ("------------------------------")
+            #alors afficher ("Egalité")
+            #alors afficher (nickname + ": " + str(playerPoint) + " Ordinateur : " + str(computerPoint))
+            #alors afficher ("------------------------------")
         #si playerChoice est égal à pierre ET computerChoice est égal à ciseaux
             #alors afficher (playerChoice + " VS " + computerChoice)
-            #afficher ("Gagné")
-            #incrémenter 1 à playerPoint
-            #afficher (nickname + ": " + str(playerPoint) + " Ordinateur : " + str(computerPoint))
-            #afficher ("------------------------------")
+            #alors afficher ("Gagné")
+            #alors incrémenter 1 à playerPoint
+            #alors afficher (nickname + ": " + str(playerPoint) + " Ordinateur : " + str(computerPoint))
+            #alors afficher ("------------------------------")
         #si playerChoice est égal à feuille ET computerChoice est égal à pierre
             #alors afficher (playerChoice + " VS " + computerChoice)
-            #afficher ("Gagné")
-            #incrémenter 1 à playerPoint
-            #afficher (nickname + ": " + str(playerPoint) + " Ordinateur : " + str(computerPoint))
-            #afficher ("------------------------------")
+            #alors afficher ("Gagné")
+            #alors incrémenter 1 à playerPoint
+            #alors afficher (nickname + ": " + str(playerPoint) + " Ordinateur : " + str(computerPoint))
+            #alors afficher ("------------------------------")
         #si playerChoice est égal à ciseaux ET computerChoice est égal à feuille
             #alors afficher (playerChoice + " VS " + computerChoice)
-            #afficher ("Gagné")
-            #incrémenter 1 à playerPoint
-            #afficher (nickname + ": " + str(playerPoint) + " Ordinateur : " + str(computerPoint))
-            #afficher ("------------------------------")
+            #alors afficher ("Gagné")
+            #alors incrémenter 1 à playerPoint
+            #alors afficher (nickname + ": " + str(playerPoint) + " Ordinateur : " + str(computerPoint))
+            #alors afficher ("------------------------------")
         #si playerChoice est égal à pierre ET computerChoice est égal à feuille
             #alors afficher (playerChoice + " VS " + computerChoice)
-            #afficher ("Perdu")
-            #incrémenter 1 à computerPoint
-            #afficher (nickname + ": " + str(playerPoint) + " Ordinateur : " + str(computerPoint))
-            #afficher ("------------------------------")
+            #alors afficher ("Perdu")
+            #alors incrémenter 1 à computerPoint
+            #alors afficher (nickname + ": " + str(playerPoint) + " Ordinateur : " + str(computerPoint))
+            #alors afficher ("------------------------------")
         #si playerChoice est égal à feuille ET computerChoice est égal à ciseaux
             #alors afficher (playerChoice + " VS " + computerChoice)
-            #afficher ("Perdu")
-            #incrémenter 1 à computerPoint
-            #afficher (nickname + ": " + str(playerPoint) + " Ordinateur : " + str(computerPoint))
-            #afficher ("------------------------------")
+            #alors afficher ("Perdu")
+            #alors incrémenter 1 à computerPoint
+            #alors afficher (nickname + ": " + str(playerPoint) + " Ordinateur : " + str(computerPoint))
+            #alors afficher ("------------------------------")
         #si playerChoice est égal à ciseaux ET computerChoice est égal à pierre
             #alors afficher (playerChoice + " VS " + computerChoice)
-            #afficher ("Perdu")
-            #incrémenter 1 à computerPoint
-            #afficher (nickname + ": " + str(playerPoint) + " Ordinateur : " + str(computerPoint))
-            #afficher ("------------------------------")
+            #alors afficher ("Perdu")
+            #alors incrémenter 1 à computerPoint
+            #alors afficher (nickname + ": " + str(playerPoint) + " Ordinateur : " + str(computerPoint))
+            #alors afficher ("------------------------------")
 
         #si playerPoint est égal à 3
             #alors afficher (nickname + ", vous avez gagné la partie ! :)")
-            #créer une variable otherGame et lui associer le retour de l'exécution de la fonction input qui demande ("Voulez-vous rejouer ? oui ou non : )
+            #alors créer une variable otherGame et lui associer le retour de l'exécution de la fonction input qui demande ("Voulez-vous rejouer ? oui ou non : )
             #si otherGame est égal à oui
                 #alors afficher ("C'est reparti !")
-                #exécuter la fonction pierreFeuilleCiseaux
+                #alors game est vrai
+                #alors playerPoint est égal à 0
+                #alors computerPoint est égal à 0
             #si otherGame est égal à non
                 #alors afficher ("A bientôt, " + nickname  + " !")
-                #casser la boucle
+                #alors casser la boucle
+            #sinon
+                #redemander avec la fonction input ("Voulez-vous rejouer ? oui ou non : ")
+
+        #si computerPoint est égal à 3
+            #alors afficher (nickname + ", vous avez perdu la partie ! :(")
+            #alors créer une variable otherGame et lui associer le retour de l'exécution de la fonction input qui demande ("Voulez-vous rejouer ? oui ou non : )
+            #si otherGame est égal à oui
+                #alors afficher ("C'est reparti !")
+                #alors game est vrai
+                #alors playerPoint est égal à 0
+                #alors computerPoint est égal à 0
+            #si otherGame est égal à non
+                #alors afficher ("A bientôt, " + nickname  + " !")
+                #alors casser la boucle
             #sinon
                 #redemander avec la fonction input ("Voulez-vous rejouer ? oui ou non : ")
 
 #exécuter la fonction pierreFeuilleCiseaux
+
+#FIN

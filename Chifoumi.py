@@ -102,32 +102,38 @@ def pierreFeuilleCiseaux():
             print(nickname + ", vous avez gagné la partie ! :)")
             #créer une variable otherGame et lui associer le retour de l'exécution de la fonction input qui demande si le joueur veut refaire une partie
             otherGame = input("Voulez-vous rejouer ? oui ou non : \n")
-            #si otherGame est égal à oui alors le jeu se relance en exécutant la fonction pierreFeuilleCiseaux
+            #si otherGame est égal à oui alors le jeu se relance
             if otherGame == "oui":
                 print("C'est reparti !")
-                pierreFeuilleCiseaux()
-            #si otherGame est égale à non alors le jeu s'arrête
-            elif otherGame == "non":
-                print("A bientôt, " + nickname  + " !")
-                break
-        #si l'ordi est à trois points alors il a gagné la partie
-        elif computerPoint == 3:
-            print(nickname + ", vous avez perdu la partie ! :(")
-            
-            #créer une variable otherGame et lui associer le retour de l'exécution de la fonction input qui demande si le joueur veut refaire une partie
-            otherGame = input("Voulez-vous rejouer ? oui ou non : \n")
-            #si otherGame est égal à oui alors le jeu se relance en exécutant la fonction pierreFeuilleCiseaux
-            if otherGame == "oui":
-                print("C'est reparti !")
-                pierreFeuilleCiseaux()
-            #si otherGame est égale à non alors le jeu s'arrête
+                game = True
+                playerPoint = 0
+                computerPoint = 0
+            #si otherGame est égal à non alors le jeu s'arrête
             elif otherGame == "non":
                 print("A bientôt, " + nickname  + " !")
                 break
             #sinon redemander la question
             else: 
                 otherGame = input("Voulez-vous rejouer ? oui ou non : \n")
-
+        #si l'ordi est à trois points alors il a gagné la partie
+        elif computerPoint == 3:
+            print(nickname + ", vous avez perdu la partie ! :(")           
+            #créer une variable otherGame et lui associer le retour de l'exécution de la fonction input qui demande si le joueur veut refaire une partie
+            otherGame = input("Voulez-vous rejouer ? oui ou non : \n")
+            #si otherGame est égal à oui alors le jeu se relance
+            if otherGame == "oui":
+                print("C'est reparti !")
+                game = True
+                playerPoint = 0
+                computerPoint = 0
+            #si otherGame est égal à non alors le jeu s'arrête
+            elif otherGame == "non":
+                print("A bientôt, " + nickname  + " !")
+                break
+            #sinon redemander la question
+            else: 
+                otherGame = input("Voulez-vous rejouer ? oui ou non : \n")
+                     
 #exécuter la fonction pierreFeuilleCiseaux
 pierreFeuilleCiseaux()
 
