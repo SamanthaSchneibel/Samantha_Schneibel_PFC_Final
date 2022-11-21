@@ -24,7 +24,7 @@
         #si computerChoice est égal à 2
             #alors computerChoice est égal à feuille
         #sinon
-            #computerChoice est égal à ciseaux
+            #alors computerChoice est égal à ciseaux
 
         #créer une variable playerChoice et lui associer le retour de l'exécution de la fonction input pour demander ("pierre, feuille ou ciseaux ? ")
         #si playerChoice est égal à pierre ET computerChoice est égal à pierre
@@ -91,7 +91,7 @@
                 #alors afficher ("A bientôt, " + nickname  + " !")
                 #alors casser la boucle
             #sinon
-                #redemander avec la fonction input ("Voulez-vous rejouer ? oui ou non : ")
+                #alors redemander avec la fonction input ("Voulez-vous rejouer ? oui ou non : ")
 
         #si computerPoint est égal à 3
             #alors afficher (nickname + ", vous avez perdu la partie ! :(")
@@ -105,7 +105,7 @@
                 #alors afficher ("A bientôt, " + nickname  + " !")
                 #alors casser la boucle
             #sinon
-                #redemander avec la fonction input ("Voulez-vous rejouer ? oui ou non : ")
+                #alors redemander avec la fonction input ("Voulez-vous rejouer ? oui ou non : ")
 
 #exécuter la fonction pierreFeuilleCiseaux
 
