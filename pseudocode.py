@@ -1,6 +1,6 @@
 #DEBUT  
 
-#on admet qu'une fonction random existe
+#on admet qu'une fonction random existe et renvoie un chiffre aléatoire
 
 #definir la fonction pierreFeuilleCiseaux
     #créer une variable nickname et lui associer le retour de l'exécution de la fonction input pour demander ("Entrez votre pseudo : ")
