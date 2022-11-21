@@ -3,7 +3,7 @@
 #on admet qu'une fonction random existe qui renvoie un chiffre aléatoire
 #on admet qu'une fonction input existe qui renvoie l'entrée de l'utilisateur
 
-#definir la fonction pierreFeuilleCiseaux
+#définir la fonction pierreFeuilleCiseaux
     #créer une variable nickname et lui associer le retour de l'exécution de la fonction input pour demander ("Entrez votre pseudo : ")
     #créer une variable playerPoint égale à 0
     #créer une variable computerPoint égale à 0
