@@ -1,6 +1,6 @@
 #DEBUT
 
-#on admet qu'une fonction random existe et renvoie un chiffre aléatoire
+#on admet qu'une fonction random existe qui renvoie un chiffre aléatoire
 from random import randint
 
 #définir la fonction pierreFeuilleCiseaux qui demande le pseudo puis instaure le score du joueur et de l'ordi
